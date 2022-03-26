@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jogo da Velha</title>
+        <link rel="stylesheet" type="text/css" href="estilojogodavelha.css">
+        <script type="text/javascript" src="scriptjogodavelha.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Sarala&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <div class="jogo">
+        <div class="vezdequem">
+            <h1>Vez de jogar: </h1>
+            <h3 id="vez">X</h3>
+        </div>
+        <table id="tabuleiro">
+            <tr>
+                <td id="t11" onclick="jogada(this.id);"></td>
+                <td id="t12" onclick="jogada(this.id);" class="vert"></td>
+                <td id="t13" onclick="jogada(this.id);"></td>
+            </tr>
+            <tr>
+                <td id="t21" onclick="jogada(this.id);" class="hori"></td>
+                <td id="t22" onclick="jogada(this.id);" class="vert hori"></td>
+                <td id="t23" onclick="jogada(this.id);" class="hori"></td>
+            </tr>
+            <tr>
+                <td id="t31" onclick="jogada(this.id);"></td>
+                <td id="t32" onclick="jogada(this.id);" class="vert"></td>
+                <td id="t33" onclick="jogada(this.id);"></td>
+            </tr>
+        </table>
+        <div class="placar">
+            <h1 id="placar-posicao">Placar :</h1>
+                <div class="jogadores">
+                    <div id="x">
+                        <h2>X </h2>
+                        <h3 id="p1">0</h3>
+                    </div>
+                    <div id="o">
+                        <h2>O </h2>
+                        <h3 id="p2">0</h3>
+                    </div>
+                </div>
+            <button type="button" onclick="reset()">Limpar Tabuleiro</button>
+        </div>
+    </div>
+</body>
+</html>

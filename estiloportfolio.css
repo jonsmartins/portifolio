@@ -1,0 +1,90 @@
+body{
+    font-family: 'Sarala', sans-serif;
+    background-color: #090E21;
+}
+
+.menu-top{
+    min-height: 50px;
+    min-width: auto;
+    color: white;
+    margin-top: -10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#JM {
+    text-align: center;
+    
+    
+}
+
+#projetos {
+    text-align: right;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: right;
+    margin: 0px;
+}
+.dropdown-child {
+    display: none;
+    
+    min-width: auto;
+    max-height: 100px;
+}
+.dropdown-child a {
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+.maincontent {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+img {
+    margin-top: 80px;
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    border: solid 4px #259C9C;
+    padding: 2px;
+}
+
+.atributos {
+    margin-top: 30px;
+    color: white;
+    border-top: solid 1px white;
+    border-width: auto;   
+}
+
+#contato {
+    color: white;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+   border-bottom: solid 1px white;
+}
+
+a:hover {
+    border-bottom: none;
+}
+#footer {
+    color: white;
+    font-family: 'Righteous', cursive;
+    font-size: 35px;
+}

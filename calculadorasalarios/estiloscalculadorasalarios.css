@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap');
+.maindiv{
+    margin-top: 120px;
+    margin-left: 10px;
+    text-align: center;
+    
+}
+.maincontent{
+    border: 1px solid black;
+    padding: 35px;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    min-height: 800px;
+    
+}
+* body{
+    background-image: url("imagemcalculadorasalarios.jpg");
+    background-repeat: repeat-y;
+}
+* h1{
+    margin-top: 20px; 
+    text-align: center;
+    font-family: 'Roboto Serif', sans-serif;
+}

@@ -1,0 +1,74 @@
+.jogo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-right: 150px;
+}
+
+
+
+.placar{
+    font-family: 'Sarala', sans-serif;
+    display: block;
+    text-align: right;
+}
+
+#placar-posicao{
+    margin-bottom: 0px;
+    text-align: right;
+    border-bottom: solid 2px black;
+}
+
+.jogadores{
+    text-align: right;
+    display: inline-flex;
+}
+
+#x{
+    text-align: right;
+    border-right: solid 2px black;
+    padding-right: 24px;
+}
+#o{
+    text-align: right;
+    padding-left: 12px;
+    margin-right: 24px;
+}
+
+#tabuleiro{
+    margin:auto;
+    background-color: rgb(84,84,84);
+    align-content: left;
+}
+td{
+    width: 80px;
+    height: 80px;
+    align-content:center;
+    text-align: center;
+    color: white;
+}
+.vert{
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+.hori{
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+body{
+    background-color: #fafafa;
+}
+button{
+    display: block;
+    width: auto;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: none;
+    border:none;
+    color: white;
+    font-family: 'Sarala', sans-serif;
+    font-size: 10px;
+    background-color: black;
+    margin-bottom: 5px;
+}
