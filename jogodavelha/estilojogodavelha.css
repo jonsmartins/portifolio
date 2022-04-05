@@ -6,8 +6,6 @@
     margin-right: 150px;
 }
 
-
-
 .placar{
     font-family: 'Sarala', sans-serif;
     display: block;
@@ -38,8 +36,9 @@
 
 #tabuleiro{
     margin:auto;
-    background-color: rgb(84,84,84);
+    background-color: #34ebc6;
     align-content: left;
+    font-size: 45px;
 }
 td{
     width: 80px;
@@ -57,7 +56,7 @@ td{
     border-bottom: 2px solid white;
 }
 body{
-    background-color: #fafafa;
+    background-color: #eb34d5;
 }
 button{
     display: block;

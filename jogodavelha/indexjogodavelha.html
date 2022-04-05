@@ -9,9 +9,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Sarala&display=swap" rel="stylesheet">
     </head>
 <body>
+    <header>
+        <h1 style="text-align: center;" >Jogo da Velha !</h1>
+    </header>
     <div class="jogo">
         <div class="vezdequem">
-            <h1>Vez de jogar: </h1>
+            <h2>Vez de jogar: </h2>
             <h3 id="vez">X</h3>
         </div>
         <table id="tabuleiro">
@@ -32,15 +35,15 @@
             </tr>
         </table>
         <div class="placar">
-            <h1 id="placar-posicao">Placar :</h1>
+            <h2 id="placar-posicao">Placar :</h2>
                 <div class="jogadores">
                     <div id="x">
-                        <h2>X </h2>
-                        <h3 id="p1">0</h3>
+                        <h3>X </h3>
+                        <h4 id="p1">0</h4>
                     </div>
                     <div id="o">
-                        <h2>O </h2>
-                        <h3 id="p2">0</h3>
+                        <h3>O </h3>
+                        <h4 id="p2">0</h4>
                     </div>
                 </div>
             <button type="button" onclick="reset()">Limpar Tabuleiro</button>
