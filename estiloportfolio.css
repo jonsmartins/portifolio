@@ -1,6 +1,6 @@
 body{
     font-family: 'Sarala', sans-serif;
-    background-color: #090E21;
+    background-color: var(--primary-color);
 }
 
 .menu-top{
@@ -8,8 +8,8 @@ body{
     min-width: auto;
     color: white;
     margin-top: -10px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 15px;
     padding-top: 20px;
     padding-left: 20px;
@@ -19,25 +19,15 @@ body{
     justify-content: space-between;
 }
 
-#JM {
-    text-align: center;
-    
-    
-}
-
-#projetos {
-    text-align: right;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
     text-align: right;
-    margin: 0px;
+    margin-left: auto;
+    margin-right: 10px;
 }
 .dropdown-child {
     display: none;
-    
     min-width: auto;
     max-height: 100px;
 }
@@ -49,42 +39,78 @@ body{
     display: block;
 }
 
-.maincontent {
-    margin-left: 25%;
-    margin-right: 25%;
+#temaicone{
+    max-height: 25px;
+    max-width: 25px;
+    cursor: pointer;
+    background-color: #edf2fc;
+    border-radius: 50%;
 }
 
-img {
-    margin-top: 80px;
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 50%;
-    border: solid 4px #259C9C;
-    padding: 2px;
+:root{
+    --primary-color: #090E21;
+    --secondary-color: #edf2fc;
+}
+
+.day-theme{
+    --primary-color: #EDF2FC;
+    --secondary-color: #090E21;
+}
+
+.maincontent {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-box{
+    width: 15%;
+    height: 60%;
+    position: absolute;
+    bottom: 18%;
+    right: 39%;
+}
+
+.img-box img{
+    position: absolute;
+    bottom: 0;
+    border: none;
+    transition: 1s;
+}
+
+.img-box:hover .back-img {
+    transform: rotate(52deg);
+    bottom: 40px;
 }
 
 .atributos {
-    margin-top: 30px;
-    color: white;
-    border-top: solid 1px white;
+    margin-top: 50px;
+    color: var(--secondary-color);
     border-width: auto;   
 }
 
 #contato {
-    color: white;
+    margin-top: 5%;
+    color: var(--secondary-color);
 }
 
 a {
    text-decoration: none;
-   color: white;
-   border-bottom: solid 1px white;
+   color: var(--secondary-color);
+   border-bottom: none;
+   
 }
 
 a:hover {
-    border-bottom: none;
+    border-bottom: solid 1px var(--secondary-color);
 }
 #footer {
-    color: white;
+    margin-top: 75px;
+    color: var(--secondary-color);
     font-family: 'Righteous', cursive;
-    font-size: 35px;
+    font-size: 50px;
 }

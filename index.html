@@ -21,9 +21,13 @@
                 <a href="" >Em construção</a>
             </div>
         </div>
+        <img id="temaicone" src="dark-mode-icon-bg.png";>
     </div>
     <div class="maincontent">
-            <img src="jonas4.jpg" alt="Jonas Martins">
+            <div class="img-box">
+                <img src="pattern-bg.png" class="back-img">
+                <img src="mainjonas.png" alt="Jonas Martins" class="main-img">
+            </div>
             <div class="atributos">
                 <p style="color: #259C9C">Olá,</p>
                 <h2>Me chamo Jonas Martins</h2>
@@ -42,5 +46,11 @@
                 <p>O sucesso é a soma de pequenos esforços repetidos dia após dia.</p>
             </div>
         </div>
+        <script>
+            var icon = document.getElementById("temaicone");
+            icon.onclick = function(){
+                document.body.classList.toggle("day-theme");
+            }
+        </script>
 </body>
 </html>

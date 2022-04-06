@@ -35,7 +35,7 @@
 
 #tabuleiro{
     margin:auto;
-    background-color: #34ebc6;
+    background-color: #eb34d5;
     align-content: left;
     font-size: 45px;
 }
@@ -55,7 +55,7 @@ td{
     border-bottom: 2px solid white;
 }
 body{
-    background-color: #eb34d5;
+    background-color: #34ebc6;
     font-family: 'Righteous', cursive;
 }
 button{
