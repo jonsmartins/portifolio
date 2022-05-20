@@ -2,7 +2,7 @@
 function TabelaInss(valor, tribut) {
     var aux = 0;
     if(tribut==1){
-        if (valor < 1212.00){
+        if (valor <= 1212.00){
             aux = valor * 0.0750;
         }
         else if ((valor > 1212.01)  &&  (valor < 2427.35)){
@@ -71,9 +71,8 @@ function abs(valor) {
 function bissecao(valor, dep, tribut) {
     var a = valor;
     var b = valor * 1.5;
-    var delta = 0.001;
-
-    var c = (a + b)/2;
+    var c = 0;
+    var delta = 0.001;    
 
     var fa = LiquidoSalario(valor, dep, tribut);
     var fb = LiquidoSalario(valor, dep, tribut);
@@ -106,53 +105,60 @@ function bissecao(valor, dep, tribut) {
     }
 }
 
-function showVal() {
+function Calcular() {
     //e.preventDefault();
     document.getElementById("inss").style.display="block";
     document.getElementById("irrf").style.display="block";
     document.getElementById("fgts").style.display="block";
-    document.getElementById("resultado").style.display="block";
+    document.getElementById("valorfinal").style.display="block";
     
-    var tribut;
-    if(document.getElementById("funcionario").checked){
+    var tipocalculo = document.getElementById("tipocalculo").value;
+    var tribut= document.getElementById("tributacao").value;
+    var dep = document.getElementById("dep").value;
+    var valor = parseFloat(document.getElementById("valor").value);
+    var valorfinal,inss,irrf,fgts;
+    
+    if(tribut=="funcionario"){
         tribut = 1;       
     }
-    if(document.getElementById("prolaborerpa").checked){
+    else if(tribut=="prolaborerpa"){
         tribut = 2;       
     }
-    if(document.getElementById("estagiario").checked){
+    else if(tribut=="estagiario"){
         tribut = 3;       
     }
     
-    var valor = parseFloat(document.getElementById("valor").value);
-    var dep = document.getElementById("dep").value;
-    
-        
-    var valorfinal,inss,irrf,fgts;
-        if(document.getElementById("buscabruto").checked){//buscar bruto
-            valorfinal=bissecao(valor, dep, tribut);
-            inss = TabelaInss(valorfinal, tribut);
-            irrf = TabelaIrrf(valorfinal, dep, tribut);
-            if((tribut==3)||(tribut==2)){
-                fgts = 0;
-            }else{
-            fgts = valorfinal * 0.08; 
-            }
-        }    
-        else if(document.getElementById("buscaliquido").checked){//buscar liquido
-            valorfinal = LiquidoSalario(valor, dep, tribut);
-            inss = TabelaInss(valor, tribut);
-            irrf = TabelaIrrf(valor, dep, tribut);  
-            if((tribut==3)||(tribut==2)){
-                fgts = 0;
-            }else{
-            fgts = valor * 0.08; 
-            }
+    if(tipocalculo=="buscarbruto"){//buscar bruto
+        valorfinal=bissecao(valor, dep, tribut);
+        inss = TabelaInss(valorfinal, tribut);
+        irrf = TabelaIrrf(valorfinal, dep, tribut);
+        if((tribut==3)||(tribut==2)){
+            fgts = 0;
+        }else{
+        fgts = valorfinal * 0.08; 
         }
-    
-    document.getElementById("inss").innerHTML="INSS: "+(inss.toFixed(2));
-    document.getElementById("irrf").innerHTML="IRRF: "+(irrf.toFixed(2));
-    document.getElementById("fgts").innerHTML="FGTS: "+(fgts.toFixed(2));
-    document.getElementById("resultado").innerHTML="VALOR: "+(valorfinal.toFixed(2));
-    
+    }    
+    else if(tipocalculo=="buscarliquido"){//buscar liquido
+        valorfinal = LiquidoSalario(valor, dep, tribut);
+        inss = TabelaInss(valor, tribut);
+        irrf = TabelaIrrf(valor, dep, tribut);  
+        if((tribut==3)||(tribut==2)){
+            fgts = 0;
+        }else{
+        fgts = valor * 0.08; 
+        }
     }
+    
+    if(tipocalculo=="buscarbruto"){//buscar bruto
+        document.getElementById("inss").innerHTML="INSS: "+(inss.toFixed(2));
+        document.getElementById("irrf").innerHTML="IRRF: "+(irrf.toFixed(2));
+        document.getElementById("fgts").innerHTML="FGTS: "+(fgts.toFixed(2));
+        document.getElementById("valorfinal").innerHTML="Salário Bruto: "+(valorfinal.toFixed(2));        
+    }
+    else if(tipocalculo=="buscarliquido"){//buscar liquido
+        document.getElementById("inss").innerHTML="INSS: "+(inss.toFixed(2));
+        document.getElementById("irrf").innerHTML="IRRF: "+(irrf.toFixed(2));
+        document.getElementById("fgts").innerHTML="FGTS: "+(fgts.toFixed(2));
+        document.getElementById("valorfinal").innerHTML="Salário Líquido: "+(valorfinal.toFixed(2));  
+    }    
+}
