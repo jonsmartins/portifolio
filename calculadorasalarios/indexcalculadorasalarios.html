@@ -8,41 +8,44 @@
     <script type="text/javascript" src="scriptcalculadorasalarios.js"></script>
 </head>
 <body>
-<div class="maincontent">
-    <h1 style="margin-top: 20px; text-align: center;">Calculadora de salários e tributos</h1>
-    <div class="maindiv">
+    <div class="maincontent">
+        <h1 style="margin-top: 20px; text-align: center;">Calculadora de salários e tributos</h1>
         <form action="">
-	        <h2 style="margin-top: 10px;">Preencha os dados abaixo</h2>
-	        <br>
-            <p>
-                <label for="tipocalculo">Buscar o bruto</label>
-                <input name="tipocalculo" id="buscabruto" type="radio" required>
-	            <label for="tipocalculo">Buscar o líquido</label>
-	            <input name="tipocalculo" id="buscaliquido" type="radio" required>
-                <br>
-	            <label for="funcionario">Funcionário</label>
-	            <input name="tributacao" id="funcionario" type="radio" required>
-	            <label for="tributacao">Prolabore/RPA</label>
-	            <input name="tributacao" id="prolaborerpa" type="radio" required>
-                <label for="tributacao">Estagiário</label>
-	            <input name="tributacao" id="estagiario" type="radio" required>
-                <br>
-            </p>
-            <label for="dependente">Digite a quantidade de dependentes: </label>	
-            <input name="dependente" id="dep" type="value" placeholder="Somente números" style="margin-left: 5px;">
-            <br>
-	        <label for="valor">Valor a ser calculado, substitua "," por ".":</label>	
-	        <input id="valor" type="value" placeholder="Ex. 1839.88" required>
-	        <br>	
-            <button type="button" class="btn btn-info" value="Calcular" onclick="showVal()">Calcular</button>
+           <h2 style="margin-top: 10px;">Preencha os dados abaixo</h2>
+           <div>
+                <label for="tipocalculo">O que deseja buscar?</label>
+                <select id="tipocalculo">
+                    <option value="buscarbruto">O Bruto</option>
+                    <option value="buscarliquido">O Líquido</option>
+                </select>       
+                <label for="tributacao">Tipo de contrato: </label>
+                <select id="tributacao">
+                    <option value="funcionario">Funcionario</option>
+                    <option value="prolaborerpa">Pj/Autonomo</option>
+                    <option value="estagiario">Estágio</option>
+                </select>
+                <label for="dependente">Digite a quantidade de dependentes: </label>	
+                <select id="dep">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>  
+                <label for="valor">Valor a ser calculado, digite com a formatação do exemplo:</label>	
+                <input id="valor" type="value" placeholder="Ex. 1839.88" required>
+                <button type="button" class="btn btn-info" onclick="Calcular()">Calcular</button>
+            </div>
         </form>
+        <div class="resultado">
+            <p id="inss" style="display: none" >INSS</p>
+            <p id="irrf" style="display: none">IRRF</p>
+            <p id="fgts" style="display: none">FGTS</p>
+            <p id="valorfinal" style="display: none">Valor</p>
+        </div>
     </div>
-    <div>
-        <p id="inss" style="display: none" >INSS</p>
-        <p id="irrf" style="display: none">IRRF</p>
-        <p id="fgts" style="display: none">FGTS</p>
-        <p id="resultado" style="display: none">Valor</p>
-    </div>
-</div>
 </body>
 </html>
