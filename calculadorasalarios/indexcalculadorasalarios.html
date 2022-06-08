@@ -13,31 +13,37 @@
         <form action="">
            <h2 style="margin-top: 10px;">Preencha os dados abaixo</h2>
            <div>
-                <label for="tipocalculo">O que deseja buscar?</label>
-                <select id="tipocalculo">
-                    <option value="buscarbruto">O Bruto</option>
-                    <option value="buscarliquido">O Líquido</option>
-                </select>       
-                <label for="tributacao">Tipo de contrato: </label>
-                <select id="tributacao">
-                    <option value="funcionario">Funcionario</option>
-                    <option value="prolaborerpa">Pj/Autonomo</option>
-                    <option value="estagiario">Estágio</option>
-                </select>
+               <div>
+                    <label for="tipocalculo">O que deseja buscar?</label>
+                    <select id="tipocalculo">
+                        <option value="buscarbruto">O Bruto</option>
+                        <option value="buscarliquido">O Líquido</option>
+                    </select>       
+                    <label for="tributacao">Tipo de contrato: </label>
+                    <select id="tributacao">
+                        <option value="funcionario">Funcionario</option>
+                        <option value="prolaborerpa">Pj/Autonomo</option>
+                        <option value="estagiario">Estágio</option>
+                    </select>
+                </div>
+                <div>
                 <label for="dependente">Selecione a quantidade de dependentes: </label>	
-                <select id="dep">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select>  
-                <label for="valor">Valor a ser calculado, digite com a formatação do exemplo:</label>	
-                <input id="valor" type="value" placeholder="Ex. 1839.88" required>
-                <button type="button" class="btn btn-info" onclick="Calcular()">Calcular</button>
+                    <select id="dep">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="valor">Valor a ser calculado, digite com a formatação do exemplo:</label>	
+                    <input id="valor" type="value" placeholder="Ex. 1839.88" required>
+                    <button type="button" class="btn btn-info" onclick="Calcular()">Calcular</button>
+                </div>
             </div>
         </form>
         <div class="resultado">
