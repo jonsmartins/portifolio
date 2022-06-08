@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dr.Alberto Rodrigues de Castro - Dermatologista</title>
+    <style type="text/css">
+        body{
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #1ab2ff;
+            background-color: #f1f1f1;
+        }
+        input{
+            margin: 9px;
+            padding: 10px;
+            border: 1px solid #6568713d;
+            width: 30%;
+            height: 25px;
+            
+        }
+        textarea{
+            margin: 5px;
+            min-width: 99%;
+            border: 1px solid #6568713d;
+            min-height: 50px;
+        }
+        H3{
+            margin: 50px;
+        }
+        .menu-top{
+            width: 100%;
+            background: #80d4ff;
+            background: linear-gradient(#80d4ff, #1ab2ff);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: sticky;
+            z-index: 1;
+            top:0px;
+        }
+        .menu-top a{
+            text-decoration: none;
+            font-style: italic;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            transition: 1s;
+        }
+        .menu-top a:hover{
+            color:#cdd1cd;
+        }
+        .servicos{
+            min-height: 40px;
+            max-width: 30%;
+            color: #f1f1f1;
+            background-color: #1ab2ff;
+            border-radius: 50px;
+            padding-top: 15px;;
+            padding-left: 10%;
+        }
+        #home{
+            border-right: 3px solid white;
+            padding-right: 90px;
+        }
+        #especialidade{
+            border-left: 3px solid white;
+            padding-left: 90px;
+        }
+        #contato{
+            border-left: 3px solid white;
+            padding-left: 90px;
+        }
+        #sobre-conteudo-lista{
+            display: flex;
+        }
+        #sobre-conteudo-lista li{
+            margin-left: 100px;
+        }
+        #botao_contato{
+            margin: 10px;
+            padding: 18px;
+            color: #ffff;
+            background: #1ab2ff;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border: 1px solid #6568713d;
+        }
+        #footer{
+            color: #ffffff;
+            background: #80d4ff;
+            background: linear-gradient(#80d4ff, #1ab2ff);
+            font-size: 65px;
+            width: 100%;
+            text-align: center; 
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="banner-top.png" style="max-height: 200px; width: 100%; padding-bottom: 0px;"/>
+    <div class="menu-top">
+        <a id="home" href="/#home-conteudo">Home</a>
+        <a id="sobre" href="/#sobre-conteudo">Sobre</a>
+        <a id="especialidade" href="/#especialidade-conteudo">Especialidade</a>
+        <a id="contato" href="/#contato-conteudo">Contato</a>
+    </div>
+    <div id="home-conteudo" style="padding-top: 30px;">
+        <h1 style="margin-top: 50px; border-bottom: 3px solid #1ab2ff;">Bem vindo !</h1>
+        <p>Navegue pelo site para conhecer meus serviços</p>
+        <p>Estou no seu aguardo, não esqueça de agendar uma consulta !</p>
+    </div>
+    <div id="sobre-conteudo" style="padding-top: 30px;">
+        <h1 style="margin-top: 50px; border-bottom: 3px solid #1ab2ff;">Sobre</h1>
+        <h2>DR. ALBERTO RODRIGUES DE CASTRO</h2>
+        <h3>CRM: 52.xxxx-x | RQE: 26xxx</h3>
+        <div id="sobre-conteudo-lista">
+            <img src="doutor-removebg-preview.png"/>
+            <ul>
+                <li>Médico pela Universidade Federal do Estado do Rio de Janeiro</li>
+                <li>Dermatologista e Tricologista pelo Instituto de Dermatologia Professor Rubem David Azulay</li>
+                <li>Especialista certificado pela Sociedade Brasileira de Dermatologia</li>
+                <li>Autor de publicações em revistas médicas nacionais e internacionais</li>
+            </ul>
+        </div>    
+    </div>
+    <div id="especialidade-conteudo" style="padding-top: 30px;">
+        <h1 style="margin-top: 50px; border-bottom: 3px solid #1ab2ff;">Especialidades</h1>
+        <div style="height:30px"></div>
+        <h2 >Ao longo de minha carreira decidi me especializar em:</h2>
+        <div style="height:25px"></div>
+        <div>
+            <h3 class="servicos">TRATAMENTO CAPILAR</h3>
+            <img src="alopecia.png"/>
+            <p>O médico dermatologista com especialização em tricologia é o profissional com conhecimento profundo sobre a área dos cabelos, couro cabeludo e pêlos do corpo.</p>
+            <p>Através desse conhecimento e de exames específicos podemos identificar, diagnosticar e tratar desordens dos fios e couro cabeludo, aumentando a auto-estima do paciente e controlando a queda, afinamento ou outras questões relacionadas.
+            </p>
+            <p>Dr. Alberto Rodrigues de Castro é médico Dermatologista e Tricologista certificado pela Sociedade Brasileira de Dermatologia, com anos de experiência e mais de 8.000 pacientes atendidos.</p>
+            <p>Contamos com tricoscopia digital e os mais modernos tratamentos em todas as nossas unidades para atender nossos pacientes da melhor maneira possível.</p>
+        </div>
+        <div>
+            <h3 class="servicos">TRATAMENTO CORPORAL</h3>
+            <img src="lipoenzimatica.png"/>
+            <p>LIPOENZIMÁTICA CORPORAL - A lipoenzimática corporal é um procedimento minimamente invasivo que consiste na aplicação de substâncias lipolíticas em regiões com acúmulo de gordura, promovendo o seu esvaziamento.</p>
+            <p>Na prática, as substâncias estimulam o metabolismo local, favorecendo a quebra das células de gordura e a sua eliminação natural.</p>
+            <img src="estrias.png"/>
+            <p>ESTRIAS - As estrias são lesões que surgem em decorrência da destruição de fibras elásticas e colágenas, geralmente após o crescimento acelerado, ganho de peso, gestação ou hipertrofia muscular.</p>
+            <p>Para tratar as estrias, é interessante recorrer a protocolos que ajudem a regenerar a pele e estimular a síntese de novas fibras de colágeno.</p>
+        </div>
+        <div>
+            <h3 class="servicos">TRATAMENTO FACIAL</h3>
+            <img src="harmonizacao.png"/>
+            <p>A harmonização facial é um conjunto de técnicas e procedimentos que busca corrigir insatisfações estéticas dos pacientes, ressaltar seus pontos positivos e atenuar os efeitos do envelhecimento na face, tornando as regiões do rosto mais proporcionais entre si.</p>
+            <p>Quando feita por especialistas com experiência, a harmonização tende a proporcionar excelentes resultados, sem perder a naturalidade.</p>
+        </div>   
+    </div>
+    <div id="contato-conteudo" style="padding-top: 30px;">
+        <h1 style="margin-top: 50px; border-bottom: 3px solid #1ab2ff; color: #1ab2ff;">Contato</h1>
+        <h2 style="color: #1ab2ff;">PREENCHA O FORMULÁRIO ABAIXO E LOGO ENTRAREMOS EM CONTATO:</h2>
+        <div>
+            <form>
+                <input type="text" name="nome" placeholder="Seu nome" required/>
+                <input type="tel" name="celular" placeholder="Seu telefone" required/>
+                <input type="email" name="email" placeholder="Seu email" required/>
+                <textarea id="mensagem_formulario" rows="10" name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                <button id="botao_contato" name="submit" type="button" onclick="Enviar()">Enviar</button>
+            </form>
+        </div>    
+    </div>
+    <div id="footer">
+        <p>~ Desafio Feegow ~</p>
+    </div>
+</body>
+</html>
