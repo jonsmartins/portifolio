@@ -16,10 +16,29 @@ body {
     gap: 30px;
     background: #1d2b3a;
 }
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    background: #1d2b3a;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    transition: 0.5s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover{
+    color: #00dfc4;
+    background: #1d2b3a;
+    border: 1px solid #00dfc4;
+}
 .inputBox {
     position: relative;
     width: 250px;
-
 }
 .inputBox input {
     width: 100%;
