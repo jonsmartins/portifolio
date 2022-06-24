@@ -29,8 +29,8 @@ body{
 .dropdown-child {
     position: absolute;
     display: none;
-    min-width: 120px;
-    max-height: 100px;
+    min-width: 200px;
+    max-height: 400px;
     padding: 5px;
 }
 .dropdown-child a {
@@ -60,6 +60,9 @@ body{
 }
 
 .maincontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -70,29 +73,12 @@ body{
 }
 
 .img-box{
-    width: 15%;
-    height: 60%;
-    position: absolute;
-    bottom: 18%;
-    right: 39%;
-}
-
-.img-box img{
-    position: absolute;
-    bottom: 0;
-    border: none;
-    transition: 1s;
-}
-
-.img-box:hover .back-img {
-    transform: rotate(52deg);
-    bottom: 40px;
+    
 }
 
 .atributos {
     margin-top: 40px;
     color: var(--secondary-color);
-    border-width: auto;   
 }
 
 #contato {
@@ -111,9 +97,9 @@ a:hover {
     border-bottom: solid 1px var(--secondary-color);
 }
 #footer {
-    margin-top: 75px;
     color: var(--secondary-color);
     font-family: 'Righteous', cursive;
-    font-size: 50px;
-    max-width: 500px;
+    text-align: justify;
+    font-size: 40px;
+    max-width: 100vh;
 }
