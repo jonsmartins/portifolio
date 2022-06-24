@@ -4,6 +4,7 @@ body{
 }
 
 .menu-top{
+    grid-area: menutop;
     min-height: 50px;
     min-width: auto;
     color: white;
@@ -60,6 +61,7 @@ body{
 }
 
 .maincontent {
+    grid-area: content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -77,8 +79,10 @@ body{
 }
 
 .atributos {
+    grid-area: content;
     margin-top: 40px;
     color: var(--secondary-color);
+    width: 100vh;
 }
 
 #contato {
@@ -102,4 +106,17 @@ a:hover {
     text-align: justify;
     font-size: 40px;
     max-width: 100vh;
+}
+
+@media only screen and (max-width: 550px) {
+    .img-box{
+        display: none;
+    }
+    body{
+        grid-template-areas: 
+        "menutop"
+        "content";
+        grid-template-columns: 2fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
