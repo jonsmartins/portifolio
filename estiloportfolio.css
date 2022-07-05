@@ -3,12 +3,11 @@ body{
     background-color: var(--primary-color);
 }
 
-.menu-top{
+header{
     grid-area: menutop;
     min-height: 50px;
     min-width: auto;
-    color: white;
-    margin-top: -10px;
+    color: var(--secondary-color);
     margin-left: 10%;
     margin-right: 10%;
     font-size: 15px;
@@ -17,29 +16,37 @@ body{
     padding-right: 20px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
-.dropdown {
+#btn-mobile{
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#dropdown {
     position: relative;
     display: inline-block;
     text-align: left;
     margin-left: auto;
     margin-right: 10px;
 }
-.dropdown-child {
+#dropdown-child {
     position: absolute;
     display: none;
     min-width: 200px;
     max-height: 400px;
     padding: 5px;
 }
-.dropdown-child a {
-    text-decoration: none;
+
+#dropdown.active #dropdown-child{
     display: block;
-}
-.dropdown:hover .dropdown-child {
-    display: block;
+    list-style: none;   
 }
 
 #temaicone{
@@ -74,10 +81,6 @@ body{
     flex-direction: row;
 }
 
-.img-box{
-    
-}
-
 .atributos {
     grid-area: content;
     margin-top: 40px;
@@ -100,6 +103,7 @@ a {
 a:hover {
     border-bottom: solid 1px var(--secondary-color);
 }
+
 #footer {
     color: var(--secondary-color);
     font-family: 'Righteous', cursive;
@@ -108,15 +112,15 @@ a:hover {
     max-width: 100vh;
 }
 
-@media only screen and (max-width: 550px) {
-    .img-box{
-        display: none;
-    }
+@media only screen and (max-width: 600px) {
     body{
         grid-template-areas: 
         "menutop"
         "content";
         grid-template-columns: 2fr;
         grid-template-rows: 1fr 1fr;
+    }
+    .img-box{
+        display: none;
     }
 }

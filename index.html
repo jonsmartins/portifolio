@@ -12,26 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="menu-top">
-        <a id="JM">Jonas Martins</a>
-        <div class="dropdown">
-            <a id="projetos">Projetos</a>
-            <div class="dropdown-child">
-                <a href="https://jonsmartins.github.io/portifolio/jogodavelha/indexjogodavelha.html" target="_blank">Jogo da Velha</a>
-                <a href="https://jonsmartins.github.io/portifolio/calculadorasalarios/indexcalculadorasalarios.html" target="_blank">Calculadora de Salários</a>
-                <a href="https://jonsmartins.github.io/portifolio/teladelogin/indexlogin.html" target="_blank">Tela de Login</a>
-                <a href="">Em construção</a>
-            </div>
+    <header>
+        <h1>Jonas Martins</h1>
+        <div id="dropdown">
+            <button id="btn-mobile">Projetos</button>
+            <ul id="dropdown-child">
+                <li><a href="https://jonsmartins.github.io/portifolio/jogodavelha/indexjogodavelha.html" target="_blank">Jogo da Velha</a></li>
+                <li><a href="https://jonsmartins.github.io/portifolio/calculadorasalarios/indexcalculadorasalarios.html" target="_blank">Calculadora de Salários</a></li>
+                <li><a href="https://jonsmartins.github.io/portifolio/teladelogin/indexlogin.html" target="_blank">Tela de Login</a></li>
+                <li><a href="">Em construção</a></li>
+            </ul>
         </div>
         <img id="temaicone" src="dark-mode-icon-bg.png";>
-    </div>
+    </header>
     <div class="maincontent">
             <div class="img-box">
                 <img src="mainjonas.png" alt="Jonas Martins" class="main-img">
             </div>
             <div class="atributos">
                 <p style="color: #259C9C">Olá,</p>
-                <h2>Me chamo Jonas Martins</h2>
                 <p>Estou no 6° Período do curso Sistemas de Informação na Veiga de Almeida</p>
                 <p>Aprendendo técnicas de Front-End</p>
                 <p>Em busca de oportunidades.</p>
@@ -48,9 +47,15 @@
             </div>
         </div>
         <script>
-            var icon = document.getElementById("temaicone");
+            const icon = document.getElementById("temaicone");
             icon.onclick = function(){
                 document.body.classList.toggle("day-theme");
+            }
+            const btnMobile = document.getElementById("btn-mobile");
+            btnMobile.addEventListener('click', toggleMenu);
+            function toggleMenu(){
+                const dropD = document.getElementById("dropdown");
+                dropD.classList.toggle('active');
             }
         </script>
 </body>
