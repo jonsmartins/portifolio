@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recibo de Pagamento</title>
+    <link rel="stylesheet" href="recibocss.css">
+    <script type="text/javascript" src="recibojs.js"></script>
+</head>
+<body>
+	<div class="dados">
+        <h1>Preencha os dados do recibo</h1>
+        <div>
+            <input class="inputField" type="text" id="empresaNome" placeholder="Nome do Empregador" required>
+            <input class="inputField" type="text" id="cpfCnpj" placeholder="Identificador: CPF/CNPJ" 
+                   onfocus="javascript: retirarFormatacao(this);" onblur="javascript: formatarCampo(this);" maxlength="14" required>
+            <input class="inputField" type="month" id="mes" required>
+        </div>
+        <div>
+            <input class="inputField" type="text" id="nomeFunc" placeholder="Nome do empregado" required>
+            <input class="inputField" type="text" id="cargo" placeholder="Cargo" required>
+            <input class="inputField" type="number" id="salario" step="0.01" placeholder="Salario" required>
+        </div>
+        <div>
+            <input class="inputField" type="number" id="dependente" placeholder="Dependentes ?" required> 
+            <span style="background: white; border-radius: 30px;border: 2px solid teal;padding: 10px; color: gray">
+                Tributos ?</span>
+            <input type="checkbox" id="tributos" required> 
+            <button class="inputField" type="button" onclick="duplicate()">Gerar</button>
+            <button class="inputField" type="button" onclick="emiteRecibo()">Imprimir</button>
+        </div>
+    </div>
+<main>
+    <div class="print" id="original0" style="margin: 20px;">
+        <div style="display: flex; justify-content: space-between; margin: 30px;">
+            <h1 id="recibo_emitente"></h1>
+            <h3 id="recibo_competencia">Competência: <span id="recibo_data"></span></h3>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+            <h3>CPF/CNPJ: <span id="recibo_identificador"></span></h3>
+            <div>
+                <h3>Nome: <span id="recibo_nome"></span></h3>
+                <h3><span id="recibo_cargo"></span></h3>
+            </div>
+        </div>
+        <h2>Recibo de Pagamento</h2>
+        <p>Declaro ter recebido a importância abaixo referente a serviços prestados: </p>
+        <div class="eventos">
+            <p>Salário: <span id="recibo_valor">0,00</span></p>
+            <p>INSS: <span id="inss">0,00</span></p>
+            <p>IRRF: <span id="irrf">0,00</span></p>
+        </div>
+        <h4>Valor Líquido: R$ <strong><span id="valorfinal">0,00</span></strong></h4>
+        <div class="assinatura">Assinatura</div>
+    </div>
+    <!--Duplicata abaixo-->
+    <div class="print" id="original1" style="margin: 20px; display: none">
+        <div style="display: flex; justify-content: space-between; margin: 30px;">
+            <h1 id="recibo_emitente1"></h1>
+            <h3 id="recibo_competencia1">Competência: <span id="recibo_data1"></span></h3>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+            <h3>CPF/CNPJ: <span id="recibo_identificador1"></span></h3>
+            <div>
+                <h3>Nome: <span id="recibo_nome1"></span></h3>
+                <h3><span id="recibo_cargo1"></span></h3>
+            </div>
+        </div>
+        <h2>Recibo de Pagamento</h2>
+        <p>Declaro ter recebido a importância abaixo referente a serviços prestados: </p>
+        <div class="eventos">
+            <p>Salário: <span id="recibo_valor1">0,00</span></p>
+            <p>INSS: <span id="inss1">0,00</span></p>
+            <p>IRRF: <span id="irrf1">0,00</span></p>
+        </div>
+        <h4>Valor Líquido: R$ <strong><span id="valorfinal1">0,00</span></strong></h4>
+        <div class="assinatura">Assinatura</div>
+    </div>
+</main>
+</body>
+</html>
