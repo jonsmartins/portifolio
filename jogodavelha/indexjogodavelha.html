@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Jogo da Velha</title>
         <link rel="stylesheet" type="text/css" href="estilojogodavelha.css">
         <script type="text/javascript" src="scriptjogodavelha.js"></script>
@@ -10,12 +13,28 @@
     </head>
 <body>
     <header>
-        <h1 style="text-align: center; margin-top: 80px;" >Jogo da Velha !</h1>
+        <h1>Jogo da Velha !</h1>
     </header>
     <div class="jogo">
-        <div class="vezdequem">
-            <h2>Vez de jogar: </h2>
-            <h3 id="vez">X</h3>
+        <div class="placar-Vez">
+            <div class="vezdequem">
+                <h2>Vez de jogar</h2>
+                <h3 id="vez">X</h3>
+            </div>
+            <div class="placar">
+                <h2 id="placar-posicao">Placar</h2>
+                    <div class="jogadores">
+                        <div id="x">
+                            <h3>X </h3>
+                            <h4 id="p1">0</h4>
+                        </div>
+                        <div id="o">
+                            <h3>O </h3>
+                            <h4 id="p2">0</h4>
+                        </div>
+                    </div>
+                <button type="button" onclick="reset()">Limpar Tabuleiro</button>
+            </div>
         </div>
         <table id="tabuleiro">
             <tr>
@@ -34,20 +53,7 @@
                 <td id="t33" onclick="jogada(this.id);"></td>
             </tr>
         </table>
-        <div class="placar">
-            <h2 id="placar-posicao">Placar :</h2>
-                <div class="jogadores">
-                    <div id="x">
-                        <h3>X </h3>
-                        <h4 id="p1">0</h4>
-                    </div>
-                    <div id="o">
-                        <h3>O </h3>
-                        <h4 id="p2">0</h4>
-                    </div>
-                </div>
-            <button type="button" onclick="reset()">Limpar Tabuleiro</button>
-        </div>
     </div>
+    <h3 style="margin-top: 2em; text-align:center">Feito por Jonas Martins</h3>
 </body>
 </html>

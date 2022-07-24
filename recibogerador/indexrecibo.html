@@ -21,12 +21,13 @@
             <input class="inputField" type="text" id="nomeFunc" placeholder="Nome do empregado" required>
             <input class="inputField" type="text" id="cargo" placeholder="Cargo" required>
             <input class="inputField" type="number" id="salario" step="0.01" placeholder="Salario" required>
-        </div>
-        <div>
             <input class="inputField" type="number" id="dependente" placeholder="Dependentes ?" required> 
-            <span style="background: white; border-radius: 30px;border: 2px solid teal;padding: 10px; color: gray">
-                Tributos ?</span>
-            <input type="checkbox" id="tributos" required> 
+            <div style="display: inline-block;">
+                <!--<span style="background: white; border-radius: 30px;border: 2px solid teal;padding: 10px; color: gray">
+                Tributos ?</span>-->
+                <input type="checkbox" id="tributos" required> 
+                <span>Tributos?</span>
+            </div>
             <button class="inputField" type="button" onclick="duplicate()">Gerar</button>
             <button class="inputField" type="button" onclick="emiteRecibo()">Imprimir</button>
         </div>

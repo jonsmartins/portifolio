@@ -11,6 +11,7 @@
 
 .resultado{
     margin-top: 35px;
+    font-weight: 700;
 }
 
 body{
@@ -22,4 +23,16 @@ h1{
     text-align: center;
     font-family: 'Roboto Serif', sans-serif;
     padding-bottom: 100px;
+}
+@media (max-width:700px){
+    .maincontent{
+        background-color: #edba02;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        margin-top: 20px;
+        padding-bottom: 30px;
+    }
 }

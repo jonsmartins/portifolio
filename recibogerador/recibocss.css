@@ -8,16 +8,16 @@ html{
 .dados h1{
     color: white;
     background: teal;
-    max-width: 40%;
+    width: 100%;
     border-radius: 30px;
-    text-align-last: center;
 }
 .dados{
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 20px;
-    display: grid;
-    gap: 1em;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1em;
 }
 .inputField{
     padding: 10px;
@@ -25,7 +25,15 @@ html{
     border-radius: 30px;
 }
 
-/* Toggle Button */
+span{
+    padding: 10px;
+    border: 2px solid teal;
+    background-color: #fff;
+    border-radius: 30px;   
+    color: gray; 
+}
+
+/* Toggle Button 
 #tributos{
     -webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
@@ -35,7 +43,7 @@ html{
 	cursor: pointer;
 	margin: 10px;
 }
-/* To create surface of toggle button */
+/* To create surface of toggle button 
 #tributos:after {
 	content: '';
 	width: 40px;
@@ -45,7 +53,7 @@ html{
 	border-radius: 18px;
 	clear: both;
 }
-/* Contents before checkbox to create toggle handle */
+/* Contents before checkbox to create toggle handle 
 #tributos:before {
 	content: '';
 	width: 15px;
@@ -58,16 +66,16 @@ html{
 	background: rgb(255, 255, 255);
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* Shift the handle to left on check event */
+/* Shift the handle to left on check event 
 #tributos:checked:before {
 	left: 30px;
 	box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* Background color when toggle button will be active */
+/* Background color when toggle button will be active 
 #tributos:checked:after {
 	background: teal;
 }
-/* Transition for smoothness */
+/* Transition for smoothness 
 #tributos,
 #tributose:before,
 #tributos:after,
@@ -78,7 +86,7 @@ html{
 	-moz-transition: ease .3s;
 	-o-transition: ease .3s;
 }
-
+*/
 .eventos{
     display: flex;
     flex-direction: column;
@@ -117,6 +125,12 @@ button {
     background-color: teal;
     cursor: pointer;
     border-radius: 20px;
+}
+
+@media (max-width:600px){
+    main{
+        display: none;
+    }
 }
 
 @media print {
