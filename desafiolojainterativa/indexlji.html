@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Loja Interativa</title>
+    <link rel="stylesheet" type="text/css" href="estilolji.css">
+    <script type="text/javascript" src="scriptlji.js" defer></script>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body onload="Load()">
+    <div class="app">
+        <div class="cadastro-produtos">
+            <div>
+                <div>
+                    <h3>CADASTRAR PRODUTO</h2>
+                    <div>
+                            <div>
+                                <label for="nomeProduto">NOME PRODUTO</label>
+                                <input type="text" name="nomeProduto" id="nomeProduto" required/>
+                            </div>
+                            <div>
+                                <label for="fabProduto">FABRICANTE PRODUTO</label>
+                                <select id="fabProduto">
+                                    <option value=""></option>
+                                    <option value="Nestlé">Nestlé</option>
+                                    <option value="Pepsico">Pepsico</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="categProduto">CATEGORIA PRODUTO</label>
+                                <select id="categProduto">
+                                    <option value=""></option>
+                                    <option value="Achocolatado">Achocolatado</option>
+                                    <option value="Adoçante">Adoçante</option>
+                                    <option value="Leite">Leite</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="quantProduto">QUANTIDADE</label>
+                                <input type="number" name="quantProduto" id="quantProduto" required/>
+                            </div>
+                            <div>
+                            <label for="valorProduto">VALOR</label>
+                            <input type="currency" name="valorProduto" id="valorProduto" placeholder="45.00" required/>      
+                            </div>
+                            <button class="btn btn-info" onclick="Adiciona()">Adicionar Produto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabela-produtos">
+            <h3 style="margin-bottom: 80px;">PRODUTOS CADASTRADOS</h3>
+            <table>
+                <tbody id="table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
