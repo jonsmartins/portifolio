@@ -1,31 +1,30 @@
 header{
     text-align: center;
 }
-.jogo{
-    display: flex;
-    flex-direction: column;
+body{
+    background-color: #34ebc6;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 900;
 }
-.placar-Vez{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1em;
-}
-.placar{
+button{
     display: block;
-    text-align: right;
+    width: auto;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: none;
+    border:none;
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    margin-bottom: 5px;
 }
-
-#placar-posicao{
-    margin-bottom: 0px;
-    text-align: right;
-    border-bottom: solid 2px black;
+td{
+    width: 80px;
+    height: 80px;
+    align-content:center;
+    text-align: center;
+    color: white;
 }
-
-.jogadores{
-    text-align: right;
-    display: inline-flex;
-}
-
 #x{
     text-align: right;
     border-right: solid 2px black;
@@ -44,12 +43,27 @@ header{
     font-size: 45px;
     border-radius: 5%;
 }
-td{
-    width: 80px;
-    height: 80px;
-    align-content:center;
-    text-align: center;
-    color: white;
+.jogo{
+    display: flex;
+    flex-direction: column;
+}
+.placar-Vez{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.placar{
+    display: block;
+    text-align: right;
+}
+#placar-posicao{
+    margin-bottom: 0px;
+    text-align: right;
+    border-bottom: solid 2px black;
+}
+.jogadores{
+    text-align: right;
+    display: inline-flex;
 }
 .vert{
     border-left: 2px solid white;
@@ -58,22 +72,6 @@ td{
 .hori{
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-}
-body{
-    background-color: #34ebc6;
-    font-family: 'Righteous', cursive;
-}
-button{
-    display: block;
-    width: auto;
-    padding:10px;
-    border-radius: 5px;
-    box-shadow: none;
-    border:none;
-    color: white;
-    font-size: 10px;
-    background-color: black;
-    margin-bottom: 5px;
 }
 @media (min-width: 600px) {
     .placar-Vez{
