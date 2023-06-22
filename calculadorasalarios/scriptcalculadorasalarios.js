@@ -39,7 +39,7 @@ function TabelaIrrf(valor, dep, tribut) {
     var irTradicional = inss + (dep*189.59);
     var irSimples = 528.00;
 
-    if(valor1 < 2640.00){// isentos
+    if(valor < 2640.00){// isentos
         return ir = 0;
     }
     else if (valor < 5015.00 && dep == 0){
