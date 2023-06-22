@@ -42,25 +42,25 @@ function TabelaIrrf(valor, dep, tribut) {
     if(valor1 < 2640.00){// isentos
         return ir = 0;
     }
-    else if (valor1 < 5015.00 && dep == 0){
-        if (((valor1 - irSimples) > 2112.01) &&
-             ((valor1 - irSimples) < 2826.66)){
+    else if (valor < 5015.00 && dep == 0){
+        if (((valor - irSimples) > 2112.01) &&
+             ((valor - irSimples) < 2826.66)){
 
         ir = (valor1 - irSimples * 0.075) - 158.40;
         }
-        else if (((valor1 - irSimples) > 2826.65) &&
-                 ((valor1 - irSimples) < 3751.06)){
+        else if (((valor - irSimples) > 2826.65) &&
+                 ((valor - irSimples) < 3751.06)){
 
-            ir = ((valor1 - irSimples) * 0.15) - 370.40;
+            ir = ((valor - irSimples) * 0.15) - 370.40;
         }
-        else if (((valor1 - irSimples) > 3751.05) &&
-                 ((valor1 - irSimples) < 4664.69)){
+        else if (((valor - irSimples) > 3751.05) &&
+                 ((valor - irSimples) < 4664.69)){
 
-            ir = ((valor1 - irSimples) * 0.225) - 651.73;
+            ir = ((valor - irSimples) * 0.225) - 651.73;
         }
-        else if ((valor1 - irSimples) > 4664.68){
+        else if ((valor - irSimples) > 4664.68){
 
-            ir = ((valor1 - irSimples) * 0.275) - 884.96;
+            ir = ((valor - irSimples) * 0.275) - 884.96;
         }
         if(ir<10.00){
             console.log(ir);
@@ -71,25 +71,25 @@ function TabelaIrrf(valor, dep, tribut) {
             return ir;
         }
     }
-    else if (valor1 < 3628.96 && dep == 1){
-        if (((valor1 - irSimples) > 2112.01) &&
-             ((valor1 - irSimples) < 2826.66)){
+    else if (valor < 3628.96 && dep == 1){
+        if (((valor - irSimples) > 2112.01) &&
+             ((valor - irSimples) < 2826.66)){
 
-        ir = (valor1 - irSimples * 0.075) - 158.40;
+        ir = (valor - irSimples * 0.075) - 158.40;
         }
-        else if (((valor1 - irSimples) > 2826.65) &&
-                 ((valor1 - irSimples) < 3751.06)){
+        else if (((valor - irSimples) > 2826.65) &&
+                 ((valor - irSimples) < 3751.06)){
 
-            ir = ((valor1 - irSimples) * 0.15) - 370.40;
+            ir = ((valor - irSimples) * 0.15) - 370.40;
         }
-        else if (((valor1 - irSimples) > 3751.05) &&
-                 ((valor1 - irSimples) < 4664.69)){
+        else if (((valor - irSimples) > 3751.05) &&
+                 ((valor - irSimples) < 4664.69)){
 
-            ir = ((valor1 - irSimples) * 0.225) - 651.73;
+            ir = ((valor - irSimples) * 0.225) - 651.73;
         }
-        else if ((valor1 - irSimples) > 4664.68){
+        else if ((valor - irSimples) > 4664.68){
 
-            ir = ((valor1 - irSimples) * 0.275) - 884.96;
+            ir = ((valor - irSimples) * 0.275) - 884.96;
         }
         if(ir<10.00){
             console.log(ir);
@@ -101,24 +101,24 @@ function TabelaIrrf(valor, dep, tribut) {
         }
     }
     else{
-        if (((valor1 - irTradicional) > 2112.01) &&
-             ((valor1 - irTradicional) < 2826.66)){
+        if (((valor - irTradicional) > 2112.01) &&
+             ((valor - irTradicional) < 2826.66)){
 
-        ir = (valor1 - irTradicional * 0.075) - 158.40;
+        ir = (valor - irTradicional * 0.075) - 158.40;
         }
-        else if (((valor1 - irTradicional) > 2826.65) &&
-                 ((valor1 - irTradicional) < 3751.06)){
+        else if (((valor - irTradicional) > 2826.65) &&
+                 ((valor - irTradicional) < 3751.06)){
 
-            ir = ((valor1 - irTradicional) * 0.15) - 370.40;
+            ir = ((valor - irTradicional) * 0.15) - 370.40;
         }
-        else if (((valor1 - irTradicional) > 3751.05) &&
-                 ((valor1 - irTradicional) < 4664.69)){
+        else if (((valor - irTradicional) > 3751.05) &&
+                 ((valor - irTradicional) < 4664.69)){
 
-            ir = ((valor1 - irTradicional) * 0.225) - 651.73;
+            ir = ((valor - irTradicional) * 0.225) - 651.73;
         }
-        else if ((valor1 - irTradicional) > 4664.68){
+        else if ((valor - irTradicional) > 4664.68){
 
-            ir = ((valor1 - irTradicional) * 0.275) - 884.96;
+            ir = ((valor - irTradicional) * 0.275) - 884.96;
         }
         if(ir<10.00){
             console.log(ir);
