@@ -46,7 +46,7 @@ function TabelaIrrf(valor, dep, tribut) {
         if (((valor - irSimples) > 2112.01) &&
              ((valor - irSimples) < 2826.66)){
 
-        ir = (valor1 - irSimples * 0.075) - 158.40;
+        ir = (valor - irSimples * 0.075) - 158.40;
         }
         else if (((valor - irSimples) > 2826.65) &&
                  ((valor - irSimples) < 3751.06)){
