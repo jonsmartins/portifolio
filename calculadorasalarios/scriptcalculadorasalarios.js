@@ -33,20 +33,20 @@ function TabelaInss(valor, tribut) {
 }
 
 function TabelaIrrf(valor, dep, tribut) {
-    
-    var inss = TabelaInss (valor,tribut);
     var ir = 0;
-    var irTradicional = inss + (dep*189.59);
+    var inss = TabelaInss (valor,tribut);
+    var dependentes = dep * 189.59;
+    var irTradicional = inss + dependentes;
     var irSimples = 528.00;
 
     if(valor < 2640.00){// isentos
         return ir = 0;
     }
-    else if (valor < 5015.00 && dep == 0){
+    else if (irTradicional < irSimples){
         if (((valor - irSimples) > 2112.01) &&
              ((valor - irSimples) < 2826.66)){
 
-        ir = (valor - irSimples * 0.075) - 158.40;
+        ir = ((valor - irSimples) * 0.075) - 158.40;
         }
         else if (((valor - irSimples) > 2826.65) &&
                  ((valor - irSimples) < 3751.06)){
@@ -71,40 +71,11 @@ function TabelaIrrf(valor, dep, tribut) {
             return ir;
         }
     }
-    else if (valor < 3628.96 && dep == 1){
-        if (((valor - irSimples) > 2112.01) &&
-             ((valor - irSimples) < 2826.66)){
-
-        ir = (valor - irSimples * 0.075) - 158.40;
-        }
-        else if (((valor - irSimples) > 2826.65) &&
-                 ((valor - irSimples) < 3751.06)){
-
-            ir = ((valor - irSimples) * 0.15) - 370.40;
-        }
-        else if (((valor - irSimples) > 3751.05) &&
-                 ((valor - irSimples) < 4664.69)){
-
-            ir = ((valor - irSimples) * 0.225) - 651.73;
-        }
-        else if ((valor - irSimples) > 4664.68){
-
-            ir = ((valor - irSimples) * 0.275) - 884.96;
-        }
-        if(ir<10.00){
-            console.log(ir);
-            ir=0;
-            return ir;
-        }
-        if(ir>10.00){
-            return ir;
-        }
-    }
-    else{
+    else if (irTradicional > irSimples){
         if (((valor - irTradicional) > 2112.01) &&
              ((valor - irTradicional) < 2826.66)){
 
-        ir = (valor - irTradicional * 0.075) - 158.40;
+        ir = ((valor - irTradicional) * 0.075) - 158.40;
         }
         else if (((valor - irTradicional) > 2826.65) &&
                  ((valor - irTradicional) < 3751.06)){
@@ -132,10 +103,9 @@ function TabelaIrrf(valor, dep, tribut) {
 }
 
 function LiquidoSalario(valor, dep, tribut) {
-    var inss = 0, irrf = 0, salario = 0;
-    inss = TabelaInss(valor, tribut);
-    irrf = TabelaIrrf(valor, dep, tribut);
-    salario = (valor - inss) - irrf;
+    var inss = TabelaInss(valor, tribut);
+    var irrf = TabelaIrrf(valor, dep, tribut);
+    var salario = (valor - inss) - irrf;
     return salario;
 }
 function abs(valor) {
@@ -146,7 +116,7 @@ function bissecao(valor, dep, tribut) {
     var a = valor;
     var b = valor * 1.5;
     var c = 0;
-    var delta = 0.001;    
+    var delta = 0.0001;    
 
     var fa = LiquidoSalario(valor, dep, tribut);
     var fb = LiquidoSalario(valor, dep, tribut);
