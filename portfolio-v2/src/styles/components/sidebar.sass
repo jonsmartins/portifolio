@@ -1,0 +1,43 @@
+@use '../variables'
+@use '../mixins'
+
+#sidebar
+    background-color: variables.$bg-color
+    flex: 1 1 0
+    border-radius: variables.$container-border-radius
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-align: center
+    position: relative
+    padding: 3rem 0
+
+    img
+        width: 313px
+        height: 313px
+        border-radius: variables.$container-border-radius
+        position: absolute
+        top: -5rem
+    
+    .title
+        color: variables.$text-color-secondary
+        background-color: variables.$bg-color-secondary
+        border-radius: variables.$card-border-radius
+        margin-top: 12rem
+        padding: .8rem 1.2rem
+
+    h2
+        color: variables.$text-color
+        max-width: 70%
+        padding: 1rem
+    
+@media (max-width: 1045px)
+    #sidebar
+        margin-bottom: .5rem
+
+        img
+            width: 280px
+            height: 280px
+            border-radius: variables.$container-border-radius
+            position: absolute
+            top: -3rem

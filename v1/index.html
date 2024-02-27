@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - JM</title>
+    <link rel="stylesheet" href="estiloportfolio.css" />
+    <script type="text/javascript" src="scriptportfolio.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Sarala&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Jonas Martins</h1>
+        <div id="dropdown">
+            <button id="btn-mobile">Projetos</button>
+            <ul id="dropdown-child">
+                <li><a href="https://jonsmartins.github.io/react-calculadora/" target="_blank">Caluladora Reactjs</a></li>
+                <li><a href="https://jonsmartins.github.io/portifolio/jogodavelha/indexjogodavelha.html" target="_blank">Jogo da Velha</a></li>
+                <li><a href="https://jonsmartins.github.io/portifolio/calculadorasalarios/indexcalculadorasalarios.html" target="_blank">Calculadora de Salários</a></li>
+                <li><a href="https://jonsmartins.github.io/portifolio/apitempo/index.html" target="_blank">API Weather</a></li>
+            </ul>
+        </div>
+        <img id="temaicone" src="dark-mode-icon-bg.png";>
+    </header>
+    <div class="maincontent">
+            <div class="img-box">
+                <img src="mainjonas.png" alt="Jonas Martins" class="main-img">
+            </div>
+            <div class="atributos">
+                <p style="color: #259C9C">Olá,</p>
+                <p>Estou no 6° Período do curso Sistemas de Informação na Veiga de Almeida</p>
+                <p>Aprendendo técnicas de Front-End</p>
+                <p>Em busca de oportunidades.</p>
+                <div id="contato">
+                    <h3>Contatos: </h3>
+                    <p>email: jonasmartinsrio@gmail.com</p>
+                    <a href="https://www.linkedin.com/in/jonas-da-silva-martins-6797ab3a/" target="_blank">Linkedin</a>
+                    <a href="https://wa.me/5521982335104" target="_blank">Whatsapp</a>
+                    <a href="https://github.com/jonsmartins" target="_blank">Github</a>
+                </div>
+                <div id="footer">
+                    <p>O sucesso é a soma de pequenos esforços repetidos dia após dia.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            const icon = document.getElementById("temaicone");
+            icon.onclick = function(){
+                document.body.classList.toggle("day-theme");
+            }
+            const btnMobile = document.getElementById("btn-mobile");
+            btnMobile.addEventListener('click', toggleMenu);
+            function toggleMenu(){
+                const dropD = document.getElementById("dropdown");
+                dropD.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>
